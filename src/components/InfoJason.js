@@ -56,17 +56,17 @@ const InfoJason = [
         member: "Back-End"
     },
     {
-        id: 1,
+        id: 5,
         name: "Jhoan",
-        fullName: "Jhoan Rodriguez",
-        text: "",
+        fullName: "Jhoan Rodríguez Hernández",
+        text: "¿ Qué tan lejos puedes llegar ?, hasta donde tú lo desees, con perseverancia y dedicación todo es posible!",
         image: "https://intranet.hbtn.io/users/profile_pic/402b2ab8c55c4a672236beb46309576c",
-        twitter: "",
-        linkedin: "",
-        github: "",
-        email: "",
-        especialities: "",
-        education: [],
+        twitter: "https://twitter.com/JhoanRodriguez_",
+        linkedin: "https://www.linkedin.com/in/jhserohe/",
+        github: "https://github.com/JhoanRodriguez",
+        email: "jhoansebastian@msn.com",
+        especialities: "C, Python, MySql, React, Serverless, AWS.",
+        education: "Ingeniero eléctricista, Especialista en Energías Renovables , Desarrollador de Software y Data Science",
         member: "Back-End"
     }
 ]
