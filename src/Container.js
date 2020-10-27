@@ -19,7 +19,7 @@ function Container({ location }) {
                     <Route path='/detail' component={DetailRecipe} />
                     <Route path='/login' component={LoginReg} />
                     <Route path='/agregarReceta' component={Recipe} />
-                    <Route path='/result' component={ResPage} />
+                    <Route path='/respage' component={ResPage} />
                 </Switch>
             </CSSTransition>
         </TransitionGroup>

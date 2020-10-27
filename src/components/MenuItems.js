@@ -10,8 +10,8 @@ const MenuItems = [
         cName: 'items'
     },
     {
-        title: 'Searching',
-        url: '/respage',
+        title: 'Recipe',
+        url: '/agregarReceta',
         cName: 'items'
     }
 ];

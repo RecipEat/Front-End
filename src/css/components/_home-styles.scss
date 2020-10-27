@@ -84,6 +84,7 @@ section {
     border-radius: 0.25rem;
     transition-duration: 300ms;
     text-decoration: inherit;
+    color: #243e63;
     .carS {
         text-align: center;
         border-radius: 50%;
@@ -100,6 +101,7 @@ section {
         font-weight: 700;
         font-size: 1.25rem;
         line-height: 1;
+        font-family: "Coda Caption";
     }
     & p {
         margin-top: $margin1;
@@ -130,6 +132,7 @@ section {
         letter-spacing: 0.025rem;
         text-align: center;
         color: $color-title;
+        font-family: "Coda Caption";
     }  
 }
 
@@ -150,6 +153,7 @@ section {
     & .text1-cust {
         font-size: 1.5rem;
         font-weight: 700;
+        color: #243e63;
     }
     & .text2-cust {
         font-weight: 900;
@@ -181,6 +185,7 @@ section {
         font-size: 1.875rem;
         font-weight: 900;
         max-width: 48rem;
+        font-family: "Coda Caption";
     }
 }
 .box-cust {
@@ -213,6 +218,8 @@ section {
         font-size: 1.875rem;
         font-weight: 900;
         max-width: 48rem;
+        font-family: "Coda Caption";
+        color: #243e63;
     }
 }
 
@@ -239,6 +246,8 @@ section {
         font-size: 1.875rem;
         font-weight: 900;
         max-width: 48rem;
+        font-family: "Coda Caption";
+        color: #243e63;
     }
 }
 
@@ -339,7 +348,7 @@ section {
             line-height: 1.375;
             max-width: 46rem;
             color: rgb(36, 62, 99);
-            font-family: 'Inter';
+            font-family: "Coda Caption";
         }
         .text-date {
             font-weight: 700;

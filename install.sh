@@ -10,3 +10,5 @@ sudo tee /etc/apt/sources.list.d/yarn.list
 # -*- installation yarn -*-
 sudo apt-get update -y && sudo apt-get install yarn
 yarn --version
+
+yarn add react-router-dom
