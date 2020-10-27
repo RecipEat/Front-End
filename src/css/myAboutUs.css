@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     text-align: justify;
+    font-family: "Aref Ruqaa";
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -24,16 +25,17 @@
 .myContent {
     width: 70%;
     margin: auto;
+    font-family: "Inter";
 }
 
 .myContent > h3 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Aref Ruqaa", Times, serif;
     font-weight: bold;
     font-size: larger;
 }
 
 .myTitles > h3{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Aref Ruqaa", Times, serif;
     font-weight: bold;
     font-size: larger;
 }

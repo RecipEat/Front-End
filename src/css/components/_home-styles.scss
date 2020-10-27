@@ -20,6 +20,7 @@ $margin1: 1rem;
         max-width: 48rem;
         font-weight: 900;
         color: rgb(36, 62, 99);
+        font-family: "Lemon";
     }
     & span {
         padding-right: $margin1;
@@ -31,7 +32,7 @@ $margin1: 1rem;
     }
     & p {
         margin: 1.25rem auto;
-        font-size: 0.875rem;
+        font-size: 1rem;
         font-weight: 500;
         color: rgb(113, 128, 150);
         max-width: 32rem;
@@ -101,13 +102,14 @@ section {
         font-weight: 700;
         font-size: 1.25rem;
         line-height: 1;
-        font-family: "Coda Caption";
+        font-family: "Aref Ruqaa";
     }
     & p {
         margin-top: $margin1;
         font-size: 0.875rem;
         font-weight: 500;
         color: rgb(80, 101, 130);
+        font-family: "Inter";
     }
     &:hover {
         transform: scaleX(1.05);
@@ -132,7 +134,7 @@ section {
         letter-spacing: 0.025rem;
         text-align: center;
         color: $color-title;
-        font-family: "Coda Caption";
+        font-family: "Aref Ruqaa";
     }  
 }
 
@@ -154,10 +156,12 @@ section {
         font-size: 1.5rem;
         font-weight: 700;
         color: #243e63;
+        font-family: "Inter";
     }
     & .text2-cust {
         font-weight: 900;
         color: $color;
+        font-family: "Aref Ruqaa";
     }
 }
 
@@ -185,7 +189,9 @@ section {
         font-size: 1.875rem;
         font-weight: 900;
         max-width: 48rem;
-        font-family: "Coda Caption";
+    }
+    & p {
+        font-family: "Inter";
     }
 }
 .box-cust {
@@ -218,9 +224,13 @@ section {
         font-size: 1.875rem;
         font-weight: 900;
         max-width: 48rem;
-        font-family: "Coda Caption";
+        font-family: "Lemon";
         color: #243e63;
     }
+    & p {
+        font-family: "Inter";
+    }
+    
 }
 
 .section-sub2 {
@@ -246,8 +256,11 @@ section {
         font-size: 1.875rem;
         font-weight: 900;
         max-width: 48rem;
-        font-family: "Coda Caption";
+        font-family: "Lemon";
         color: #243e63;
+    }
+    & p {
+        font-family: "Inter";
     }
 }
 
@@ -348,7 +361,7 @@ section {
             line-height: 1.375;
             max-width: 46rem;
             color: rgb(36, 62, 99);
-            font-family: "Coda Caption";
+            font-family: "Lemon";
         }
         .text-date {
             font-weight: 700;

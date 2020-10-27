@@ -113,7 +113,7 @@ class Home extends Component {
         </section>
         <section>
           <div className="section-recipes">
-            <h2 className="text-h2">Services</h2>
+            <h2 className="text-h2">Servicios</h2>
           </div>
           <div className="card-grid">
             <div className="cards-service">
@@ -155,7 +155,7 @@ class Home extends Component {
                   <div className="text2-cust">Usuarios</div>
                 </div>
               </div>
-              <a className="btn-more">Comenzar</a>
+              <Link className="btn-more" to="/respage">Comenzar</Link>
             </div>
             <div className="column-two">
               <div className="column-img">

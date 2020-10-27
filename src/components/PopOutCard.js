@@ -1,5 +1,5 @@
-import React, { Component, useEffect, useState } from "react"
-import {Link} from "react-router-dom"
+import React from "react";
+import {Link} from "react-router-dom";
 
 function PopOutCard (props){
     const importedData = props
