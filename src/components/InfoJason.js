@@ -19,12 +19,12 @@ const InfoJason = [
         fullName: "Adrian De La Asuncion Buelvas",
         text: "",
         image: "https://intranet.hbtn.io/users/profile_pic/99c72903e304369daffb1fd1537dad1a",
-        twitter: "",
-        linkedin: "",
-        github: "",
+        twitter: "https://twitter.com/AdrianDeLaAsun1",
+        linkedin: "https://www.linkedin.com/in/adrian-enrique-de-la-asuncion-buelvas-24645718a/",
+        github: "https://github.com/AdrianDel07",
         email: "delaasuncionbuelvasadrian@gmail.com",
-        especialities: "",
-        education: [],
+        especialities: "C, Python, Php, Javascript, MySQL, HTML, Sass",
+        education: ["SENA, Holberton School"],
         member: "Front-End"
     },
     {

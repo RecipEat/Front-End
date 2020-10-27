@@ -12,35 +12,35 @@ class Recipe extends Component {
                 <div className="logo-recipeat">
                     <img src={RecipEAT} />
                 </div>
-                <div className="form">
+                <form className="form-box-recipes">
                     <div className="box-fields">
                         <div className="form-recipes">
                             <label htmlFor="nameRecipe">Nombre de la Receta</label>
-                            <input type="text" name="nameRecipe" placeholder="Nombre" />
+                            <input className="input-fields" type="text" name="nameRecipe" placeholder="Nombre" />
                         </div>
                         <div className="form-recipes">
                             <label htmlFor="ingredients">Ingredientes</label>
-                            <input type="text" name="ingredients" placeholder="Ingredientes" />
+                            <input className="input-fields" type="text" name="ingredients" placeholder="Ingredientes" />
                         </div>
                     </div>
                     <div className="box-fields">
                         <div className="form-recipes">
                             <label htmlFor="time">Time</label>
-                            <input type="text" name="time" placeholder="Tiempo de Preparacion" />
+                            <input className="input-fields" type="text" name="time" placeholder="Tiempo de Preparacion" />
                         </div>
                         <div className="form-recipes">
                             <label htmlFor="ingredienstsize">Cantidad de Ingredientes</label>
-                            <input type="number" name="ingredienstsize" placeholder="Cantidad de Ingredientes" />
+                            <input className="input-fields" type="number" name="ingredienstsize" placeholder="Cantidad de Ingredientes" />
                         </div>
                     </div>
                     <div className="box-fields">
                         <div className="form-recipes">
                             <label htmlFor="measure">Ingredientes Medidas</label>
-                            <input type="text" name="measure" placeholder="Medidas de Ingredientes" />
+                            <input className="input-fields" type="text" name="measure" placeholder="Medidas de Ingredientes" />
                         </div>
                         <div className="form-recipes">
                             <label htmlFor="description">Descripcion</label>
-                            <input type="text" name="description" placeholder="De que se trata el Plato" />
+                            <input className="input-fields" type="text" name="description" placeholder="De que se trata el Plato" />
                         </div>
                     </div>
                     <div className="box-fields">
@@ -48,39 +48,15 @@ class Recipe extends Component {
                             <label htmlFor="preparation">Preparacion</label>
                             <textarea type="text" name="preparation" placeholder="Como prepararlo?" />
                         </div>
-                        <div className="style-radio">
-                            <div className="radio-sl">
-                                <label htmlFor="score">1</label>
-                                <input type="radio" name="score" />
-                            </div>
-                            <div className="radio-sl">
-                                <label htmlFor="score">2</label>
-                                <input type="radio" name="score" />
-                            </div>
-                            <div className="radio-sl">
-                                <label htmlFor="score">3</label>
-                                <input type="radio" name="score" />
-                            </div>
-                            <div className="radio-sl">
-                                <label htmlFor="score">4</label>
-                                <input type="radio" name="score" />
-                            </div>
-                            <div className="radio-sl">
-                                <label htmlFor="score">5</label>
-                                <input type="radio" name="score" />
-                            </div>
+                        <div className="form-recipes">
+                            <label htmlFor="image">Imagen</label>
+                            <input className="input-fields" type="text" name="image" placeholder="Anade la URL de la Imagen" />
                         </div>
                     </div>
-                    <div className="form-recipes">
-                        <label htmlFor="image">Imagen</label>
-                        <input type="text" name="image" placeholder="Anade la URL de la Imagen" />
+                    <div className="btn-box-recipe">
+                        <input type="submit" className="btn-login" value="Enviar" />
                     </div>
-                </div>
-                </div>
-                <div className="footer-btn">
-                <button type="button" className="btn-login">
-                    Enviar
-                </button>
+                </form>
                 </div>
             </div>
         );

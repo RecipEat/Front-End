@@ -1,5 +1,4 @@
 .myRpage {
-    width: 100%;
     min-height: 730px;
     background-color: white;
     margin: 0;
@@ -166,7 +165,6 @@
 
 
 .search-form {
-    width: 60rem;
     height: 10rem;
     display: flex;
     justify-content: center;

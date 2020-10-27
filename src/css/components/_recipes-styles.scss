@@ -1,112 +1,148 @@
 .container-receta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3rem;
-    & .logo-recipeat {
-        width: 100%;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        & img {
-            width: 19rem;
-        }
-    }
-  
-    .content {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem;
+  & .logo-recipeat {
+      width: 100%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      & img {
+          width: 19rem;
+      }
+  }
+}
+.content {  
+  display: flex;
+  flex-direction: column;
+    & .box-fields {
       display: flex;
       flex-direction: column;
-        & .box-fields {
-          display: flex;
-          flex-direction: row;
-      }
-  
-        .form {
-            margin-top: 2em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-  
-        .form-recipes {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-left: 2rem;
-            & label {
-                font-size: 20px;
-            }
-            & textarea {
-                margin-top: 6px;
-                min-width: 18em;
-                height: 150px;
-                padding: 0px 10px;
-                font-size: 16px;
-                font-family: "Open Sans", sans-serif;
-                background-color: #f3f3f3;
-                border: 0;
-                border-radius: 4px;
-                margin-bottom: 31px;
-            }
-            & input {
-                margin-top: 6px;
-                min-width: 18em;
-                height: 37px;
-                padding: 0px 10px;
-                font-size: 16px;
-                font-family: "Open Sans", sans-serif;
-                background-color: #f3f3f3;
-                border: 0;
-                border-radius: 4px;
-                margin-bottom: 31px;
-                transition: all 250ms ease-in-out;
-                &:focus {
-                outline: none;
-                box-shadow: 0px 0px 12px 0.8px #ffd92ffb;
-                }
-            }
+    }
+    .form-box-recipes {
+      margin-top: 2em;
+      align-items: center;
+      
 
+    .form-recipes {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 2rem;
+    }
+    & label {
+      font-size: 20px;
+      font-family: "Inter";
+    }
+    & textarea {
+      margin-top: 6px;
+      min-width: 18em;
+      height: 150px;
+      padding: 0px 10px;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      background-color: #f3f3f3;
+      border: 0;
+      border-radius: 4px;
+      margin-bottom: 31px;
+    }
+    & .input-fields {
+      margin-top: 6px;
+      min-width: 18em;
+      height: 37px;
+      padding: 0px 10px;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      background-color: #f3f3f3;
+      border: 0;
+      border-radius: 4px;
+      margin-bottom: 31px;
+      transition: all 250ms ease-in-out;
+      &:focus {
+        outline: none;
+        box-shadow: 0px 0px 12px 0.8px #ffd92ffb;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .content {  
+    display: flex;
+    flex-direction: column;
+      & .box-fields {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form-box-recipes {
+        margin-top: 2em;
+        align-items: center;
+        
+
+    .form-recipes {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 2rem;
+        & label {
+          font-size: 20px;
+          font-family: "Inter";
+        }
+        & textarea {
+          margin-top: 6px;
+          min-width: 18em;
+          height: 150px;
+          padding: 0px 10px;
+          font-size: 16px;
+          font-family: "Open Sans", sans-serif;
+          background-color: #f3f3f3;
+          border: 0;
+          border-radius: 4px;
+          margin-bottom: 31px;
+        }
+        & .input-fields {
+          margin-top: 6px;
+          min-width: 18em;
+          height: 37px;
+          padding: 0px 10px;
+          font-size: 16px;
+          font-family: "Open Sans", sans-serif;
+          border: 0;
+          border-radius: 4px;
+          margin-bottom: 31px;
+          transition: all 250ms ease-in-out;
+          &:focus {
+            outline: none;
+            box-shadow: 0px 0px 12px 0.8px #ffd92ffb;
+          }
         }
       }
     }
-    .style-radio {
-        display: inline-block;
-        margin-top: 6px;
-        min-width: 18em;
-        height: 150px;
-        padding: 0px 10px;
-        font-size: 16px;
-        border: 0;
-        margin-bottom: 31px;
-        margin-left: 2rem;
-    }
-    .radio-sl {
-        text-align: center;
-    }
-    .footer-btn {
-      margin-top: 3em;
-    }
   }
-
-
-//Custom Fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-
+}
 //Button
-.btn-login {
-  font-size: 21px;
-  padding: 5px 20px;
-  border: 0;
-  background-color: #f2af58;
-  color: #fff;
-  border-radius: 3px;
-  transition: all 250ms ease-in-out;
-  text-decoration: none;
-  cursor: pointer;
-  &:hover {
-    background-color: #fad099;
-  }
-  &:focus {
-    outline: none;
+.btn-box-recipe {
+  display: flex;
+  justify-content: center;
+  .btn-login {
+    font-size: 21px;
+    padding: 5px 20px;
+    border: 0;
+    background-color: #f2af58;
+    color: #fff;
+    border-radius: 3px;
+    transition: all 250ms ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      background-color: #fad099;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 }
