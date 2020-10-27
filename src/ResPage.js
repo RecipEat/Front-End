@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-/*import ReactPaginate from 'react-paginate';*/
+import React, {useEffect, useState, Component} from 'react';
+import ReactPaginate from 'react-paginate';
 import PopOutCard from "./components/PopOutCard"
 import { CardDeck } from 'react-bootstrap';
 import QueueItems from "./components/QueueComponent"
@@ -122,3 +122,4 @@ export default function ResPage() {
         </div>
     )
 }
+
