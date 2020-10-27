@@ -66,7 +66,7 @@ const InfoJason = [
         github: "https://github.com/JhoanRodriguez",
         email: "jhoansebastian@msn.com",
         especialities: "C, Python, MySql, React, Serverless, AWS.",
-        education: "Ingeniero eléctricista, Especialista en Energías Renovables , Desarrollador de Software y Data Science",
+        education: "Ing Eléctricista, Desarrollador de Software y Data Science",
         member: "Back-End"
     }
 ]

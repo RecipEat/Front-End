@@ -5,6 +5,7 @@ import "./css/styles.scss";
 
 class Recipe extends Component {
     render() {
+        document.title = 'Agregar Receta';
         return (
             <div className="container-receta" ref={this.props.containerRef}>
                 <div className="header">Agregar Recetas</div>

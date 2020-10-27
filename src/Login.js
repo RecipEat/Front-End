@@ -30,6 +30,7 @@ class LoginReg extends React.Component {
   }
 
   render() {
+    document.title = 'Login';
     const { isLogginActive } = this.state;
     const current = isLogginActive ? "Register" : "Login";
     const currentActive = isLogginActive ? "login" : "register";

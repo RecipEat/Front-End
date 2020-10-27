@@ -18,6 +18,7 @@ class Content extends React.Component {
 
 
     render() {
+        document.title = 'About Us';
         const front = this.state.info.slice(0, 3).map((item, index) =>
             <FlipCard
                 key={index}

@@ -8,6 +8,7 @@ import "./css/myResultPage.css";
 
 
 export default function ResPage() {
+    document.title = 'Search';
     const APP_ID = "a2799540"
     const APP_KEY = "f7e5e87ff82ab6a8b20afe314169bdde"
 

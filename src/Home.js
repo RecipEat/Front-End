@@ -10,6 +10,7 @@ class Home extends Component {
     localStorage.setItem('query', JSON.stringify(""))
 }
   render() {
+    document.title = 'Home';
     return (
       <div className="container">
         <section>
