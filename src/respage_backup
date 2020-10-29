@@ -1,15 +1,13 @@
 import React, {useEffect, useState, Component} from 'react';
 import ReactPaginate from 'react-paginate';
 import PopOutCard from "./components/PopOutCard"
-import { CardDeck } from 'react-bootstrap';
+import { CardDeck, Form } from 'react-bootstrap';
 import QueueItems from "./components/QueueComponent"
 import axios from "axios"
 import "./css/myResultPage.css";
 
 
-
 export default function ResPage() {
-    document.title = 'Search';
     const APP_ID = "a2799540"
     const APP_KEY = "f7e5e87ff82ab6a8b20afe314169bdde"
 
@@ -89,21 +87,6 @@ export default function ResPage() {
             .replace(/\s(.)/g, function($1) { return $1.toUpperCase(); })
     }
 
-    function funPreparacion(preparacion) {
-        const list = []
-        preparacion.map((item, index) => {
-            const obj ={
-                text: item,
-                key: index,
-                completed: false
-            }
-            return list.push(obj)
-        })
-        localStorage.setItem('instructions', JSON.stringify(list))
-        return list
-
-    }
-
     return (
         <div className="container">
             <div className="formDiv">
@@ -144,11 +127,14 @@ export default function ResPage() {
                     source = {item.data.usuario}
                     ingredients= {item.data.ingredientes_medidas}
                     description= {item.data.descripcion}
-                    instructions= {funPreparacion(item.data.preparacion)}
+                    instructions= {item.data.preparacion}
                     saveData = {saveData}
                 />)}
             </CardDeck>
         </div>
     )
+    // return (
+    //     <div className="container"></div>
+    // )
 }
 
