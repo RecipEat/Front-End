@@ -138,7 +138,7 @@ export default function ResPage() {
                     <PopOutCard
                     key = {item.data.id}
                     label = {toCamelCase(item.data.titulo)}
-                    image = {item.data.image}
+                    image = {item.data.imagen}
                     totalTime = {item.data.tiempo}
                     source = {item.data.usuario}
                     ingredients= {item.data.ingredientes_medidas}
