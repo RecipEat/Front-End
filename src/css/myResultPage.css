@@ -102,13 +102,13 @@
 .myRcardText {
     height: 110px;
     width: 100%;
-    padding: 7px 10px 7px 10px;
+    padding: 20px 15px 20px 25px;
     margin-top: 12px;
 }
 
 .myRcardText > p {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .myRcardBottom{
@@ -149,7 +149,7 @@
 
 /*------------------------------------ONE I FOUND ONLINE----------------------------------*/
 
-.container {
+/* .container {
   display: flex;
   -webkit-display: box;
   -moz-display: box;
@@ -160,20 +160,25 @@
   justify-content: center;
   padding: 0;
   margin: 0;
-}
+} */
 
 /*______________________________________END___________________________________________*/
 
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+
+}
 
 .search-form {
-    height: 10rem;
+    width: 80%;
+    max-width: 75%;
+    height: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     border-radius: 0.5rem;
     box-shadow: 1rem 2rem 5rem #aaa;
-    position: relative;
 }
 
 .search-form input {
