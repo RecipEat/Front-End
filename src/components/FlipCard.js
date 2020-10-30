@@ -12,15 +12,11 @@ class CardBack extends React.Component {
         return(
             <div className='card-side back'>
                 <div className="myDescription">
-                    <p className='back-text'><b>Name:</b> {this.props.info.fullName}</p>
                     <p className='back-text'><b>Especialities:</b> {this.props.info.especialities}</p>
                     <p className='back-text'><b>Education:</b> {this.props.info.education}</p>
-                    <p
-                        className='back-text'
-                        style={{color: color, fontWeight: "bolder"}}
-
-                    >
-                        <b>Member:</b>      {this.props.info.member}
+                    <p className='back-text' style={{color: color, fontWeight: "bolder"}}>
+                        <b>Member:</b>      
+                        {this.props.info.member}
                     </p>
                 </div>
                 <div className="myLinks">

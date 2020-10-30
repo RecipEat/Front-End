@@ -1,5 +1,6 @@
 import React from "react";
 import RecipEAT from '../assets/img/RecipEAT.svg';
+import { Link } from "react-router-dom";
 import "../css/styles.scss";
 
 class Login extends React.Component {
@@ -27,9 +28,12 @@ class Login extends React.Component {
           </div>
         </div>
         <div className="footer-btn">
-          <button type="button" className="btn-login">
+          <button type="submit" className="btn-login">
             Login
           </button>
+          <div className="box-register">
+            <Link className="btn-register" to='/register'>Registrar</Link>
+          </div>
         </div>
       </div>
     );

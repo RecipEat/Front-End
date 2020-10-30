@@ -1,8 +1,8 @@
 const InfoJason = [
     {
         id: 1,
-        name: "Andrew",
-        fullName: "Andrew Kalil Ortiz",
+        name: "Andrew Kalil",
+        fullName: "Andrew ",
         text: "I believe that we can make great things happen if we work hard and apply what we learn in our day to day lifestyle",
         image: "https://intranet.hbtn.io/users/profile_pic/35dcf5a69965dba61b1b90649e4f602b",
         twitter: "https://twitter.com/AndrewKalil1",
@@ -15,8 +15,8 @@ const InfoJason = [
     },
     {
         id: 2,
-        name: "Adrian",
-        fullName: "Adrian De La Asuncion Buelvas",
+        name: "Adrian De La Asuncion",
+        fullName: "Adrian ",
         text: "",
         image: "https://intranet.hbtn.io/users/profile_pic/99c72903e304369daffb1fd1537dad1a",
         twitter: "https://twitter.com/AdrianDeLaAsun1",
@@ -29,8 +29,8 @@ const InfoJason = [
     },
     {
         id: 3,
-        name: "Esteban",
-        fullName: "Esteban De La Hoz",
+        name: "Esteban De La Hoz",
+        fullName: "Esteban ",
         text: "",
         image: "https://intranet.hbtn.io/users/profile_pic/1597f14f0eda920db85ec62c3ed77963",
         twitter: "",
@@ -43,8 +43,8 @@ const InfoJason = [
     },
     {
         id: 4,
-        name: "Eduardo",
-        fullName: "Eduardo Vega",
+        name: "Eduardo Vega",
+        fullName: "Eduardo ",
         text: "",
         image: "https://intranet.hbtn.io/users/profile_pic/1665f863f225e76aff6e38ab2829e6ee",
         twitter: "",
@@ -57,8 +57,8 @@ const InfoJason = [
     },
     {
         id: 5,
-        name: "Jhoan",
-        fullName: "Jhoan Rodríguez Hernández",
+        name: "Jhoan Rodríguez",
+        fullName: "Jhoan  Hernández",
         text: "¿ Qué tan lejos puedes llegar ?, hasta donde tú lo desees, con perseverancia y dedicación todo es posible!",
         image: "https://intranet.hbtn.io/users/profile_pic/402b2ab8c55c4a672236beb46309576c",
         twitter: "https://twitter.com/JhoanRodriguez_",
@@ -71,4 +71,4 @@ const InfoJason = [
     }
 ]
 
-export default InfoJason
+export default InfoJason;

@@ -5,8 +5,6 @@ $color-title: #243e63;
 $margin1: 1rem;
 
 %section {
-    position: relative;
-    flex-shrink: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -53,6 +51,7 @@ $margin1: 1rem;
     }
     & .btn-more:hover {
         background-color: #e7962c;
+        transform: scale(1.1);
     }
     & .column-two {
         margin-top: 3rem;
@@ -112,9 +111,8 @@ section {
         color: rgb(80, 101, 130);
         font-family: "Inter";
     }
-    &:hover {
-        transform: scaleX(1.05);
-        transform: scaleY(1.05);
+    &:hover {   
+        transform: scale(1.1);
         transition: width 2s, height 4s;
         background-color: $color2;
         transition-duration: 300s;

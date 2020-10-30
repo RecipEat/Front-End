@@ -12,7 +12,7 @@ class Home extends Component {
   render() {
     document.title = 'Home';
     return (
-      <div className="container">
+      <div className="container" accessible={true}>
         <section>
           <div className="section-main section-m">
             <div className="column-one">
@@ -28,7 +28,7 @@ class Home extends Component {
             </div>
             <div className="column-two">
               <div className="column-img">
-                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"/>
+                <img src="https://i.imgur.com/c0OmTkt.jpg"/>
                 <svg className="back-anima" viewBox="0 0 1280 1280">
                   <path d="M55 33.5C44.5 37 35 47.6 32.8 58.3c-4.3 
                   20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 
@@ -160,7 +160,7 @@ class Home extends Component {
             </div>
             <div className="column-two">
               <div className="column-img">
-                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"/>
+                <img src="https://i.imgur.com/c0OmTkt.jpg"/>
                 <svg className="back-anima" viewBox="0 0 1280 1280">
                   <path d="M55 33.5C44.5 37 35 47.6 32.8 58.3c-4.3 
                   20.6 16.3 41.2 36.9 36.9 15.5-3.2 27.5-19 

@@ -5,7 +5,7 @@ function PopOutCard (props){
     const importedData = props
 
     return (
-        <div className="myRcard">
+        <div className="myRcard container-fluid">
             <div>
                 <img src={props.image} alt="" className="myRcardImg"/>
             </div>
@@ -19,7 +19,7 @@ function PopOutCard (props){
                 </div>
             </div>
             <div className="myRcardText">
-                <p>{props.text}</p>
+                <p>{props.description}</p>
             </div>
             <div className="myRcardBottom">
                 <Link to={{

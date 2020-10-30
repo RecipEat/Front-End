@@ -23,8 +23,8 @@
 /*-----------------------------------------THE CARD ITSELF------------------------------------*/
 
 .myRcard {
-    height: 430px;
-    width: 340px;
+    height: 358px;
+    width: 273px;
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     margin: 35px 30px 35px 30px;
     position: relative;
@@ -32,7 +32,8 @@
     border-radius: 10px;
     box-shadow: 0 10px 35px rgb(129, 119, 119),0 2px 15px rgba(0,0,0,.07);
     padding: 7px 7px 10px 7px;
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
 
 }
 

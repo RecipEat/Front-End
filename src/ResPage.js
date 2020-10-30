@@ -7,6 +7,7 @@ import axios from "axios"
 import "./css/myResultPage.css";
 
 
+
 export default function ResPage() {
     document.title = 'Search';
     const APP_ID = "a2799540"
@@ -32,9 +33,11 @@ export default function ResPage() {
     }, [query])
 
     const getRecipes = async () => {
-        const response = await axios.get(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=${0}&to=${10}`)
-        setRecipes(response.data.hits)
-        console.log(response.data.hits)
+        const res = await axios.get(`https://cors-anywhere.herokuapp.com/sigueuwc04.execute-api.us-east-1.amazonaws.com/dev/item/search?search=${query}`)
+        //const res = await axios.get(`https://cors-anywhere.herokuapp.com/sigueuwc04.execute-api.us-east-1.amazonaws.com/dev/item`)
+        // const response = await axios.get(`https://sigueuwc04.execute-api.us-east-1.amazonaws.com/dev/item/search?search=${query}`, Headers={'Access-Control-Allow-Origin':'request-originating server addresses'})
+        setRecipes(res.data)
+        console.log(res.data)
     }
 
     const updateSearch = e => {
@@ -45,6 +48,9 @@ export default function ResPage() {
         e.preventDefault()
         setQuery(search)
         setSearch("")
+        if (search === "" && listItems.length > 0) {
+            setQuery(listItems.join(" "))
+        }
         saveData("ingredientList", listItems)
         setList([])
     }
@@ -78,20 +84,37 @@ export default function ResPage() {
         })
     }
 
+    function toCamelCase(str) {
+        return str
+            .replace(/\s(.)/g, function($1) { return $1.toUpperCase(); })
+    }
+
+    function funPreparacion(preparacion) {
+        const list = []
+        preparacion.map((item, index) => {
+            const obj ={
+                text: item,
+                key: index,
+                completed: false
+            }
+            return list.push(obj)
+        })
+        return list
+
+    }
+
     return (
         <div className="myRpage">
             <div className="formDiv">
                     <form
                         className="search-form"
-                        onSubmit={getSearch}
-                        >
+                        onSubmit={getSearch}>
                             <input
                                 type="text"
                                 placeholder="Search recipe"
                                 autoComplete="off"
                                 onChange={updateSearch}
-                                value={search}
-                                />
+                                value={search}/>
                             <button
                                 onClick={addItem}
                                 className="addButton"
@@ -107,20 +130,21 @@ export default function ResPage() {
                         setUpdate={setUpdate}
                         />
                     </div>
+                    <CardDeck className="myCardDeck">
+                        {recipes.map((item) =>
+                            <PopOutCard
+                            key = {item.data.id}
+                            label = {toCamelCase(item.data.titulo)}
+                            image = {item.data.imagen}
+                            totalTime = {item.data.tiempo}
+                            source = {item.data.usuario}
+                            ingredients= {item.data.ingredientes_medidas}
+                            description= {item.data.descripcion}
+                            instructions= {funPreparacion(item.data.preparacion)}
+                            saveData = {saveData}
+                        />)}
+                    </CardDeck>
             </div>
-            <CardDeck className="myCardDeck">
-                {recipes.map((item, index) =>
-                    <PopOutCard
-                    key = {index}
-                    label = {item.recipe.label}
-                    image = {item.recipe.image}
-                    totalTime = {item.recipe.totalTime}
-                    source = {item.recipe.source}
-                    ingredients= {item.recipe.ingredientLines}
-                    saveData = {saveData}
-                />)}
-            </CardDeck>
-        </div>
+            </div>
     )
 }
-

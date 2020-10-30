@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import "../css/myQueue.css"
 import QueueItems from './subComponents/QueueComponent'
 
+
 class ListQueue extends Component {
     constructor(props){
         super(props)
