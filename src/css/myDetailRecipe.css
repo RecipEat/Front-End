@@ -45,6 +45,7 @@
     border-width: 3px;
     border-color: darkcyan;
     border-radius: 10px;
+    margin: 10px 5px 10px 5px;
 }
 
 .dPageIngredients{
@@ -56,6 +57,7 @@
     border-style: solid;
     border-width: 2px;
     border-color: darkcyan;
+    margin: 10px 5px 10px 5px;
     align-self: center;
     background-image: url("https://img.freepik.com/free-photo/seamless-wood-texture-background_105762-62.jpg?size=626&ext=jpg");
     margin-top: 10px; margin-bottom: 10px;
@@ -77,16 +79,13 @@
 
 .dPageInstructions{
     margin-top: 15px;
-    height: 600px;
     width: 100%;
-    background-color: beige;
     border-radius: 20px;
     flex-wrap: wrap;
+    padding: 50px 10px 50px 10px;
+    display: flex;
 }
 
-.dPageInstructions {
-    padding: 50px 50px 50px 50px
-}
 
 .dPageInsText {
     padding: 20px 20px 20px 20px;

@@ -99,7 +99,6 @@ export default function ResPage() {
             }
             return list.push(obj)
         })
-        localStorage.setItem('instructions', JSON.stringify(list))
         return list
 
     }

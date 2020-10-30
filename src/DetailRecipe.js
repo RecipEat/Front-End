@@ -7,7 +7,8 @@ import TodoItem from './components/TodoItem'
 
 function DetailRecipe(props) {
 
-    const [todos, setTodo] = useState(JSON.parse(localStorage.getItem('instructions')))
+    const [todos, setTodo] = useState(JSON.parse(localStorage.getItem('tData')).instructions)
+    // const [count, setCount] = useState(0)
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -16,18 +17,13 @@ function DetailRecipe(props) {
     const tData = JSON.parse(localStorage.getItem('tData'))
     //const instructions = tData.instructions.map((item, index) => [item, index, false])
 
-    function handleChange(key) {
-        const updatedTodos = todos
-        updatedTodos.map(item => {
-            if (item.key === key){
-                item.completed = !item.completed
-                console.log(item.completed)
+    const toggleComplete = (key) => {
+        setTodo(todos.map(todo => todo.key === key?
+            {
+                ...todo,
+                completed: !todo.completed
             }
-            setTodo(updatedTodos)
-
-        })
-        setTodo(updatedTodos)
-        localStorage.setItem('instructions', JSON.stringify(todos))
+            : todo))
     }
 
     const completedStyle = {
@@ -57,14 +53,19 @@ function DetailRecipe(props) {
                             <input
                                 type="checkbox"
                                 checked={task.completed}
-                                onChange={() => handleChange(task.key)}/>
-                            <p className="CheckBoxText" style={task.completed ? completedStyle : null}>{task.text}</p>
+                                onChange={() => toggleComplete(task.key)}/>
+                            <p className="CheckBoxText" style={task.completed ? completedStyle : null}>{task.key + 1}) {task.text}</p>
                         </div>
                     )}
+                    {/* <input
+                        value={value}
+                        onChange={e => setValue(e.target.value)}/> */}
                 </div>
                 <div className ="dPageInsClock">
                     {/* <Countdown
                         time={tData.totalTime}/> */}
+                    {/* <div>count: {count}</div>
+                    <button onClick={() => setCount(count + 1)}>Press me</button> */}
                 </div>
             </div>
 
