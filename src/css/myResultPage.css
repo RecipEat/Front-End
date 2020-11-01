@@ -44,7 +44,7 @@
 .myRcardImg {
     width: 100%;
     margin: auto;
-    height: 200px;
+    height: 175px;
     background-color: whitesmoke;
     border-radius: 10px;
 }
@@ -58,9 +58,8 @@
 .myRcardTitle {
     background-color: inherit;
     margin-left: 55px;
-    margin-top: 5px;
     width: 210px;
-    height: 25px;
+    height: 20px;
     align-content: center;
     text-align: center;
 }
@@ -103,7 +102,6 @@
     height: 110px;
     width: 100%;
     padding: 20px 15px 20px 25px;
-    margin-top: 12px;
 }
 
 .myRcardText > p {
@@ -169,7 +167,7 @@
 
 }
 
-.search-form {
+/* .search-form {
     max-width: 100%;
     height: 7rem;
     display: flex;
@@ -178,8 +176,194 @@
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     border-radius: 0.5rem;
     box-shadow: 1rem 2rem 5rem #aaa;
+} */
+
+.formDiv > .container {
+    min-height: 100px;
+    border-radius: 10px;
+    
 }
 
+.form-container {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    box-shadow: 0 10px 35px rgb(129, 119, 119),0 2px 15px rgba(0,0,0,.07);
+    margin-top: 30px;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #005cbf;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    box-shadow: 0 0 0 .2rem rgba(38,143,255,.5);
+}
+
+.form-inline {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    background: #eff1f4;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+    text-indent: 9px;
+    margin-right: 2px;
+    height: 45px;
+    min-width: 250px;
+}  
+
+.addButton {
+    background: #eff1f4;
+    height: 45px;
+    min-width: 40px;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: black;
+    border: 0;
+}
+
+.addButton:hover {
+    background-color: #47ccde;
+    color: white;
+    cursor: pointer;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}  
+
+form .btn:active {
+    transform: translateY(1px);
+}  
+
+form .btn:hover {
+    opacity: 1;
+}  
+
+form .btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}  
+
+form .btn-primary {
+    background-color: #055ada !important;
+    color: #fff;
+    outline: none !important;
+}
+
+form .btn {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+  
+form .btn-primary:focus {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    box-shadow: 0 0 0 .2rem rgba(38,143,255,.5);
+}   
+
+form .btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}  
+
+form .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+  
+.btn:hover {
+    color: #212529;
+    text-decoration: none;
+    background-color: #47ccde;
+}
+
+[type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}  
+
+form .btn-primary {
+    color: #fff;
+    background-color: #47ccde;
+    border-color: #47ccde;
+}  
+
+form .btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }  
+
+@media (prefers-reduced-motion:reduce) {
+    .btn {
+      transition: none;
+    }
+}  
+  
+@media (prefers-reduced-motion:reduce) {
+    .form-control {
+      transition: none;
+    }
+}  
+
+@media (min-width:576px) {
+    .form-inline .form-group {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 0;
+      align-self: center;
+    }
+}
+  
+@media (min-width:576px) {
+    .form-inline .form-control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+      align-items: center;
+      align-self: center;
+    }
+  }    
+  
 .search-form input {
     font-size: 1.6rem;
     border: none;
@@ -210,33 +394,13 @@
     background-color: rgb(98, 170, 170);
 }
 
-.addButton {
-    width: 7%;
-    height: 48px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    background-color: rgb(201, 100, 100);
-    color: black;
-    margin-top: 0;
-    margin-left: 0.5rem;
-    border-radius: 10px;
-    border: 0;
-}
-
-.addButton:hover {
-    cursor: pointer;
-    background-color: floralwhite;
-
-}
-
-
 .formDiv {
     align-items: center;
     justify-content: center;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    background-color: inherit;
 
 }
 

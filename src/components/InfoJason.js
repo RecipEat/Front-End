@@ -51,8 +51,8 @@ const InfoJason = [
         linkedin: "https://co.linkedin.com/in/eduardo-andr%C3%A9s-vega-2602031a1",
         github: "https://github.com/EduardoVega04",
         email: "eduarvega04@hotmail.com",
-        especialities: "Bash, C, Python, MySQL, HTML, CSS, Javascript, Django"
-        education: ["Holberton School],
+        especialities: "Bash, C, Python, MySQL, HTML, CSS, Javascript, Django",
+        education: "Holberton School",
         member: "Back-End"
     },
     {
