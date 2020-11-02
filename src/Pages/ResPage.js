@@ -1,10 +1,10 @@
 import React, {useEffect, useState, Component} from 'react';
 /*import ReactPaginate from 'react-paginate';*/
-import PopOutCard from "./components/PopOutCard"
+import PopOutCard from "../components/PopOutCard"
 import { CardDeck } from 'react-bootstrap';
-import QueueItems from "./components/QueueComponent"
+import QueueItems from "../components/QueueComponent"
 import axios from "axios"
-import "./css/myResultPage.css";
+import "../css/myResultPage.css";
 
 
 
@@ -105,22 +105,29 @@ export default function ResPage() {
     return (
         <div className="myRpage">
             <div className="formDiv">
+                <div className="container form-container">
                     <form
-                        className="search-form"
+                        className="form-inline"
                         onSubmit={getSearch}>
-                            <input
-                                type="text"
-                                placeholder="Search recipe"
-                                autoComplete="off"
-                                onChange={updateSearch}
-                                value={search}/>
-                            <button
-                                onClick={addItem}
-                                className="addButton"
-                            >Add</button>
-                            <input
-                                type="submit"
-                                value="search"/>
+                            <div className="form-group">
+                                <input
+                                    type="text"
+                                    placeholder="Search recipe"
+                                    autoComplete="off"
+                                    className="form-control"
+                                    onChange={updateSearch}
+                                    value={search}/>
+                                    <button
+                                        onClick={addItem}
+                                        className="addButton"
+                                >+</button>
+                            </div>  
+                            <div className="form-group">
+                                <input
+                                    className="btn btn-primary"
+                                    type="submit"
+                                    value="search"/>
+                            </div>
                     </form>
                     <div>
                         <QueueItems
@@ -129,6 +136,8 @@ export default function ResPage() {
                         setUpdate={setUpdate}
                         />
                     </div>
+                </div>
+                <div className="container">
                     <CardDeck className="myCardDeck">
                         {recipes.map((item) =>
                             <PopOutCard
@@ -139,10 +148,11 @@ export default function ResPage() {
                             source = {item.data.usuario}
                             ingredients= {item.data.ingredientes_medidas}
                             description= {item.data.descripcion}
-                            instructions= {funPreparacion(item.data.preparacion)}
+                            //instructions= {funPreparacion(item.data.preparacion)}
                             saveData = {saveData}
                         />)}
                     </CardDeck>
+                </div>
             </div>
         </div>
     )

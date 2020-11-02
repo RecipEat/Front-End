@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './assets/img/recipEat.png';
+
 import './css/styles.scss';
+
 
 class Footer extends Component {
   render () {

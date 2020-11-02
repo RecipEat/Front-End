@@ -1,8 +1,9 @@
 import React from "react";
-import FlipCard from "./components/FlipCard";
-import {CardDeck} from "react-bootstrap";
-import InfoJason from "./components/InfoJason";
-import './css/myAboutUs.css';
+import { CardDeck } from "react-bootstrap";
+import FlipCard from "../components/FlipCard";
+import InfoJason from "../components/InfoJason";
+import '../css/myAboutUs.css';
+
 
 class Content extends React.Component {
     constructor() {

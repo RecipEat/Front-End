@@ -1,7 +1,9 @@
 import React from "react";
-import "./css/styles.scss";
-import Login from "./components/Login";
-import Register from "./components/Register";
+import Login from "../components/Login";
+import Register from "../components/Register";
+
+import "../css/styles.scss";
+
 
 class LoginReg extends React.Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from "react"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function PopOutCard (props){
     const importedData = props
@@ -15,6 +15,7 @@ function PopOutCard (props){
                     <p>by: {props.source}</p>
                 </div>
                 <div className="myClock">
+                    <i class="fas fa-stopwatch"></i>
                     <div>{props.totalTime}</div>
                 </div>
             </div>

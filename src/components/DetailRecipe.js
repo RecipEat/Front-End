@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import './css/myDetailRecipe.css';
-import TodoItem from './components/TodoItem'
+import '../css/myDetailRecipe.css';
+import TodoItem from './/TodoItem'
 // import Countdown from './components/Timer'
 // import TodoQueue from './components/TodoQueue'
 
@@ -42,7 +42,7 @@ function DetailRecipe(props) {
                 <img className="dPageImage" src={tData.image} alt=""/>
                 <div className="dPageIngredients">
                     <ul>
-                        {tData.ingredients.map((list, index) => <li key={index}>{list}</li>)}
+                        {tData.ingredientes.map((list, index) => <li key={index}>{list}</li>)}
                     </ul>
                 </div>
             </div>

@@ -11,7 +11,7 @@ const MenuItems = [
     },
     {
         title: 'Recipe',
-        url: '/agregarReceta',
+        url: '/recipes',
         cName: 'items'
     }
 ];

@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import coock from './assets/img/cloche.svg';
-import hat from './assets/img/chef-hat.svg';
-import './css/styles.scss';
+import coock from '../assets/img/cloche.svg';
+import hat from '../assets/img/chef-hat.svg';
+import PageLoading from "../components/PageLoading";
+
+import '../css/styles.scss';
+
 
 class Home extends Component {
+  state = {
+    loading: true,
+  }
   componentDidMount() {
     window.scrollTo(0, 0)
     localStorage.setItem('query', JSON.stringify(""))
 }
   render() {
+    // if (this.state.loading == true) {
+    //   return (<PageLoading />)
+    // }
     document.title = 'Home';
     return (
       <div className="container" accessible={true}>
