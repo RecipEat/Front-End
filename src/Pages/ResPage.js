@@ -148,7 +148,7 @@ export default function ResPage() {
                             source = {item.data.usuario}
                             ingredients= {item.data.ingredientes_medidas}
                             description= {item.data.descripcion}
-                            //instructions= {funPreparacion(item.data.preparacion)}
+                            instructions= {funPreparacion(item.data.preparacion)}
                             saveData = {saveData}
                         />)}
                     </CardDeck>

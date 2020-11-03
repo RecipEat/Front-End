@@ -7,10 +7,9 @@
     align-content: center;
     vertical-align: middle;
     width: 100%;
-    height: 200px;
+    height: 175px;
     padding-top: 15px; padding-bottom: 15px;
     text-align: center;
-
 }
 
 .dPageTitle > h1{
@@ -26,41 +25,28 @@
     font-family: "Sofia";
 }
 
-.dPageImg-ingredients{
-    margin-top: 25px; margin-bottom: 75px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
+.dPageImage{
+    align-self: center;
+    
 }
 
-.dPageImage{
-    min-height: 350px;
-    max-height: 600px;
-    min-width: 450px;
-    max-width: 850px;
-    justify-content: center;
-    align-self: center;
+.dPageImage > img {
     border-style: solid;
     border-width: 3px;
     border-color: darkcyan;
     border-radius: 10px;
-    margin: 10px 5px 10px 5px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.32);
 }
 
 .dPageIngredients{
-    min-height: 80%; height: 100%;
-    min-width: 400px; width: 28%;
     border-radius: 20px;
-    padding-top: 25px; padding-bottom: 25px;
-    padding-left: 55px; padding-right: 25px;
     border-style: solid;
     border-width: 2px;
     border-color: darkcyan;
-    margin: 10px 5px 10px 5px;
     align-self: center;
     background-image: url("https://img.freepik.com/free-photo/seamless-wood-texture-background_105762-62.jpg?size=626&ext=jpg");
     margin-top: 10px; margin-bottom: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.32);
 }
 
 .dPageIngredients > ul{
@@ -69,12 +55,13 @@
     list-style: disc;
     font-family: 'Times New Roman', Times, serif;
     justify-content: center;
+    margin: 10px 4px 10px 20px;
 }
 
 .dPageIngredients > ul > li {
     color: black;
     font-weight: bolder;
-    font-size: x-large;
+    font-size: large;
 }
 
 .dPageInstructions{
@@ -113,3 +100,87 @@
 	color: red;
 }
 /* ______________________________________________________________END____________________________________________________ */
+
+/*---------------------------------------------------------------Detail Page---------------------------------------------*/
+
+@media (min-width:1200px) {
+    .n-container {
+      max-width: 1140px;
+    }
+}
+  
+@media (min-width:992px) {
+    .n-container {
+      max-width: 960px;
+    }
+}
+
+@media (min-width:768px) {
+    .n-container {
+      max-width: 720px;
+    }
+}
+
+@media (min-width:576px) {
+    .n-container {
+      max-width: 540px;
+    }
+}
+  
+.n-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* @media (max-width:768px) {
+    .n-row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+} */
+
+.n-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: center;
+}
+
+@media (min-width:768px) {
+    .n-col-md-8 {
+      -ms-flex: 0 0 66.666667%;
+      flex: 0 0 66.666667%;
+      max-width: 66.666667%;
+    }
+}  
+.n-col-md-8{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+  
+@media (min-width:768px) {
+    .n-col-md-4 {
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+}
+
+.n-col-md-4{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+    
+/*________________________________________________________________END____________________________________________________*/

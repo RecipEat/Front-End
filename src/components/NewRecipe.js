@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import RecipesForm from './RecipesForm'
 import RecipEAT from '../assets/img/RecipEAT.svg';
 import api from "../api";
+import QueueItems from './QueueComponent'
 
 import "../css/styles.scss";
 
@@ -28,9 +29,11 @@ class NewRecipe extends Component {
         this.addToListMeasure = this.addToListMeasure.bind(this)
         this.addToInstructions = this.addToInstructions.bind(this)
         this.handlePostSubmit = this.handlePostSubmit.bind(this)
+        // this.deleteItem = this.deleteItem.bind(this)
+        this.setKeys = this.setKeys.bind(this)
     };
 
-        handleChange = (e) => {
+    handleChange = (e) => {
         const {name, value} = e.target
         this.setState({[name]: value})
         console.log(this.state)
@@ -67,6 +70,24 @@ class NewRecipe extends Component {
         }
         this.setState({instruction: ""})
         console.log(this.state.listInstructions)
+    }
+
+    // deleteItem = (key, list) => {
+    //     const filteredItems = list.filter(item =>
+    //         item !== key)
+    //         setList(filteredItems)
+    // }
+
+    setKeys(array){
+        const list = []
+        array.map((item, index) => {
+            const obj ={
+                text: item,
+                key: index,
+            }
+            return list.push(obj)
+        })
+        return list
     }
 
     handlePostSubmit = async (e) => {
@@ -149,6 +170,12 @@ class NewRecipe extends Component {
                                         onChange={this.handleChange} 
                                         placeholder="Ingredientes" />
                                         <button onClick={this.addToList}>+</button>
+                                    </div>
+                                    <div>
+                                    <QueueItems
+                                        items={this.setKeys(this.state.listIngredients)}
+                                        deleteItem={this.deleteItem}
+                                        />
                                     </div>
                                 </div>
                             </div>

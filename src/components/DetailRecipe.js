@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import '../css/myDetailRecipe.css';
 import TodoItem from './/TodoItem'
+import {Container, Row, Col} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 // import Countdown from './components/Timer'
 // import TodoQueue from './components/TodoQueue'
 
@@ -38,37 +40,37 @@ function DetailRecipe(props) {
                 <h1>{tData.label}</h1>
                 <h4>Owner: {tData.source}</h4>
             </div>
-            <div className="dPageImg-ingredients">
-                <img className="dPageImage" src={tData.image} alt=""/>
-                <div className="dPageIngredients">
-                    <ul>
-                        {tData.ingredientes.map((list, index) => <li key={index}>{list}</li>)}
-                    </ul>
-                </div>
-            </div>
-            <div className="dPageInstructions">
-                <div className="dPageInsText">
-                    {todos.map(task =>
-                        <div>
-                            <input
-                                type="checkbox"
-                                checked={task.completed}
-                                onChange={() => toggleComplete(task.key)}/>
-                            <p className="CheckBoxText" style={task.completed ? completedStyle : null}>{task.key + 1}) {task.text}</p>
-                        </div>
-                    )}
-                    {/* <input
-                        value={value}
-                        onChange={e => setValue(e.target.value)}/> */}
-                </div>
-                <div className ="dPageInsClock">
-                    {/* <Countdown
-                        time={tData.totalTime}/> */}
-                    {/* <div>count: {count}</div>
-                    <button onClick={() => setCount(count + 1)}>Press me</button> */}
-                </div>
-            </div>
-
+            <Container>
+                <Row>
+                    <Col sm={8} className="dPageImage">
+                        <img src={tData.image} alt=""/>
+                    </Col>
+                    <Col sm={4} className="dPageIngredients">
+                        <ul>
+                            {tData.ingredients.map((list, index) => <li key={index}>{list}</li>)}
+                        </ul>
+                    </Col>
+                </Row>
+            </Container>
+            <Container>
+                <Row>
+                    <Col sm={8}>
+                        {todos.map(task =>
+                            <div>
+                                <input
+                                    type="checkbox"
+                                    checked={task.completed}
+                                    onChange={() => toggleComplete(task.key)}/>
+                                <p className="CheckBoxText" style={task.completed ? completedStyle : null}>{task.key + 1}) {task.text}</p>
+                            </div>
+                        )}
+                    </Col>
+                    <Col sm={4}>
+                            {/* <Countdown
+                                time={tData.totalTime}/> */}
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 }

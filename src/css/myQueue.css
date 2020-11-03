@@ -43,7 +43,7 @@
 .queueList{
     color: white;
     width: 16rem;
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    background-color: whitesmoke;
     height: 50px;
     margin: 20px auto;
     border-radius: 5px;
@@ -83,7 +83,7 @@
     .queueList{
         color: white;
         width: 30rem;
-        background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+        background-color: whitesmoke;
         height: 50px;
         margin: 10px auto;
         border-radius: 5px;
