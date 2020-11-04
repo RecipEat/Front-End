@@ -1,5 +1,6 @@
 import React from "react";
 import '../css/myAboutUs.css';
+import { Card } from 'react-bootstrap'
 
 let twitterLogo = "https://www.flaticon.com/svg/static/icons/svg/733/733579.svg"
 let linkedinLogo = "https://www.flaticon.com/svg/static/icons/svg/174/174857.svg"
@@ -11,13 +12,16 @@ class CardBack extends React.Component {
         const color = this.props.info.member === "Front-End" ? "royalblue" : "palevioletred"
         return(
             <div className='card-side back'>
-                <div className="myDescription">
-                    <p className='back-text'><b>Especialities:</b> {this.props.info.especialities}</p>
-                    <p className='back-text'><b>Education:</b> {this.props.info.education}</p>
-                    <p className='back-text' style={{color: color, fontWeight: "bolder"}}>
-                        <b>Member:</b>      
-                        {this.props.info.member}
-                    </p>
+                <div className="back-text">
+                    <Card.Text>
+                        <b>Especialities:</b> {this.props.info.especialities}
+                    </Card.Text>
+                    <Card.Text>
+                        <b>Education:</b> {this.props.info.education}
+                    </Card.Text>
+                    <Card.Text>
+                        <b>Member:</b>{this.props.info.member}
+                    </Card.Text>
                 </div>
                 <div className="myLinks">
                     <a

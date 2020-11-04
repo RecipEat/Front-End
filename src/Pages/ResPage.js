@@ -1,7 +1,8 @@
 import React, {useEffect, useState, Component} from 'react';
 /*import ReactPaginate from 'react-paginate';*/
 import PopOutCard from "../components/PopOutCard"
-import { CardDeck } from 'react-bootstrap';
+import { CardDeck, Form, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import QueueItems from "../components/QueueComponent"
 import axios from "axios"
 import "../css/myResultPage.css";
@@ -106,29 +107,30 @@ export default function ResPage() {
         <div className="myRpage">
             <div className="formDiv">
                 <div className="container form-container">
-                    <form
+                    <Form
                         className="form-inline"
                         onSubmit={getSearch}>
-                            <div className="form-group">
-                                <input
+                            <Form.Group
+                                className="myFormGroup">
+                                <Form.Control
                                     type="text"
                                     placeholder="Search recipe"
                                     autoComplete="off"
-                                    className="form-control"
                                     onChange={updateSearch}
+                                    className="searchInput"
                                     value={search}/>
-                                    <button
-                                        onClick={addItem}
-                                        className="addButton"
-                                >+</button>
-                            </div>  
-                            <div className="form-group">
-                                <input
-                                    className="btn btn-primary"
-                                    type="submit"
-                                    value="search"/>
-                            </div>
-                    </form>
+                                <button
+                                    onClick={addItem}
+                                    className="addButton"
+                                >+
+                                </button>
+                            </Form.Group>
+                            <Button
+                                variant="primary"
+                                type="submit">
+                                Search
+                            </Button>
+                    </Form>
                     <div>
                         <QueueItems
                         items={listItems}

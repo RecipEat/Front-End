@@ -23,7 +23,7 @@
 }
 
 .myContent {
-    width: 70%;
+    width: 80%;
     margin: auto;
     font-family: "Inter";
 }
@@ -44,11 +44,8 @@
 
 .myCardDeck {
     align-content: center;
-    padding-bottom: 20px;
     width: 100%;
     justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
     display: flex;
     flex-direction: row;
 }
@@ -87,7 +84,7 @@
     height: 350px;
     perspective: 1000px;
     display: flex;
-    padding: 15px 15px 15px 15px;
+    margin: 25px 20px 25px 20px;
 }
 
 .c-body {
@@ -130,11 +127,11 @@ img {
 }
 
 .back-text {
-    padding: 10px;
+    padding: 10px 5px 5px 10px;
     font-family: 'Courier New', Courier, monospace;
     justify-content: center;
     text-align: left;
-    font-size: large;
+    font-size: medium;
 }
 
 /*- Back side -*/
@@ -153,7 +150,6 @@ img {
     position: absolute;
     padding: 5px 10px 5px 10px;
     display: flex;
-    align-content: center;
     justify-content: center;
 }
 

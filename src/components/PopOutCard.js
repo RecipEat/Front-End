@@ -1,41 +1,43 @@
 import React, { Component, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import { Button, Card } from 'react-bootstrap'
 
 function PopOutCard (props){
     const importedData = props
 
     return (
-        <div className="myRcard container-fluid">
-            <div>
-                <img src={props.image} alt="" className="myRcardImg"/>
-            </div>
-            <div className="myRcardTitleandClock">
-                <div className="myRcardTitle">
+        <Card className="myRcard">
+            <Card.Img src={props.image} alt="" className="myRcardImg"/>
+            <Card.Body>
+                <Card.Title className="myRcardTitle">
                     <p>{props.label}</p>
+                </Card.Title>
+                <Card.Subtitle className="myRcardSubtitle">
                     <p>by: {props.source}</p>
-                </div>
+                </Card.Subtitle>                
                 <div className="myClock">
                     <i class="fas fa-stopwatch"></i>
                     <div>{props.totalTime}</div>
                 </div>
-            </div>
-            <div className="myRcardText">
-                <p>{props.description}</p>
-            </div>
-            <div className="myRcardBottom">
+                <Card.Text className="myRcardText">
+                    <p>{props.description}</p>
+                </Card.Text>
+            </Card.Body>
+            <Card.Footer className="myRcardBottom">
                 <Link to={{
                     pathname: '/detail',
                     tData: importedData
                 }}
                 >
-                    <button
-                        className="btn myRcardButton"
+                    <Button
+                        
                         onClick={() => props.saveData('tData', importedData)}
                     >
-                    Ir</button>
+                        Ir
+                    </Button>
                 </Link>
-            </div>
-        </div>
+            </Card.Footer>
+        </Card>
     )
 }
 
