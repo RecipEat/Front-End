@@ -191,18 +191,18 @@ class NewRecipe extends Component {
                                 <div className="form-recipes">
                                     <label htmlFor="titulo">Nombre de la Receta</label>
                                     <input className="input-fields" type="text" 
-                                    name="title" 
-                                    value={this.state.title} 
-                                    onChange={this.handleChange} placeholder="Nombre" />
+                                        name="title" 
+                                        value={this.state.title} 
+                                        onChange={this.handleChange} placeholder="Nombre" />
                                 </div>
                                 <div className="form-recipes">
                                     <label htmlFor="ingredientes">Ingredientes</label>
                                     <div className="btn-box-list"> 
                                         <input className="input-fields" type="text" 
-                                        name="ingredients" 
-                                        value={this.state.ingredients.text} 
-                                        onChange={this.handleChange} 
-                                        placeholder="Ingredientes" />
+                                            name="ingredients" 
+                                            value={this.state.ingredients.text} 
+                                            onChange={this.handleChange} 
+                                            placeholder="Ingredientes" />
                                         <button 
                                             onClick={(e) => this.addToList(e, "listIngredients")}>
                                         +</button>
@@ -220,17 +220,17 @@ class NewRecipe extends Component {
                                 <div className="form-recipes">
                                     <label htmlFor="time">Time</label>
                                     <input className="input-fields" type="text" name="time" 
-                                    value={this.time} 
-                                    onChange={this.handleChange} 
-                                    placeholder="Tiempo de Preparacion" />
+                                        value={this.time} 
+                                        onChange={this.handleChange} 
+                                        placeholder="Tiempo de Preparacion" />
                                 </div>
                                 <div className="form-recipes">
                                     <label htmlFor="ingredienstsize">Cantidad de Ingredientes</label>
                                     <input className="input-fields" type="number" 
-                                    name="ingredients_size" 
-                                    value={this.state.ingredients_size} 
-                                    onChange={this.handleChange} 
-                                    placeholder="Cantidad de Ingredientes" />
+                                        name="ingredients_size" 
+                                        value={this.state.ingredients_size} 
+                                        onChange={this.handleChange} 
+                                        placeholder="Cantidad de Ingredientes" />
                                 </div>
                             </div>
                             <div className="box-fields">
@@ -238,11 +238,13 @@ class NewRecipe extends Component {
                                     <label htmlFor="measure">Ingredientes Medidas</label>
                                     <div className="btn-box-list">
                                         <input className="input-fields" type="text" 
-                                        name="ingredients_measure" 
-                                        value={this.state.ingredients_measure.text} 
-                                        onChange={this.handleChange} 
-                                        placeholder="Medidas de Ingredientes" />
-                                        <button onClick={(e) => this.addToList(e, "listIngredientsMeasure")}>+</button>
+                                            name="ingredients_measure" 
+                                            value={this.state.ingredients_measure.text} 
+                                            onChange={this.handleChange} 
+                                            placeholder="Medidas de Ingredientes" />
+                                        <button 
+                                            onClick={(e) => this.addToList(e, "listIngredientsMeasure")}>
+                                        +</button>
                                     </div>
                                     <div className="queueItem">
                                         <QueueItems
@@ -255,10 +257,10 @@ class NewRecipe extends Component {
                                 <div className="form-recipes">
                                     <label htmlFor="description">Descripcion</label>
                                     <input className="input-fields" type="text" 
-                                    name="description" 
-                                    value={this.state.description} 
-                                    onChange={this.handleChange} 
-                                    placeholder="De que se trata el Plato" />
+                                        name="description" 
+                                        value={this.state.description} 
+                                        onChange={this.handleChange} 
+                                        placeholder="De que se trata el Plato" />
                                 </div>
                             </div>
                             <div className="box-fields">
@@ -266,26 +268,28 @@ class NewRecipe extends Component {
                                     <label htmlFor="preparation">Preparacion</label>
                                     <div className="btn-box-list">
                                         <textarea type="text" name="instruction" 
-                                        value={this.state.instruction.text} 
-                                        onChange={this.handleChange} 
-                                        placeholder="Como prepararlo?" />
-                                        <button onClick={(e) => this.addToList(e, "listInstructions")}>+</button>
+                                            value={this.state.instruction.text} 
+                                            onChange={this.handleChange} 
+                                            placeholder="Como prepararlo?" />
+                                        <button
+                                            onClick={(e) => this.addToList(e, "listInstructions")}>
+                                        +</button>
                                     </div>
                                     <div>
                                         <QueueItems
                                             items={this.state.listInstructions}
                                             deleteItem={this.deleteItem}
                                             name="listInstructions"
-                                            />
+                                        />
                                     </div>
                                 </div>
                                 <div className="form-recipes">
                                     <label htmlFor="image">Imagen</label>
                                     <input className="input-fields" type="text" 
-                                    name="image" 
-                                    value={this.state.image} 
-                                    onChange={this.handleChange} 
-                                    placeholder="Anade la URL de la Imagen" />
+                                        name="image" 
+                                        value={this.state.image} 
+                                        onChange={this.handleChange} 
+                                        placeholder="Anade la URL de la Imagen" />
                                 </div>
                             </div>
                             <div className="btn-box-recipe">
