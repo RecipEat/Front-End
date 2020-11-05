@@ -81,6 +81,15 @@
     font-size: x-large;
 }
 
+.myCheckBox{
+    display: flex;
+}
+
+.myCheckBox > input {
+    margin-right: 7px;
+    margin-top: 7px;
+}
+
 /*---------------------------------------------------------------task--------------------------------------------------*/
 
 .my-todo-component {
@@ -100,87 +109,3 @@
 	color: red;
 }
 /* ______________________________________________________________END____________________________________________________ */
-
-/*---------------------------------------------------------------Detail Page---------------------------------------------*/
-
-@media (min-width:1200px) {
-    .n-container {
-      max-width: 1140px;
-    }
-}
-  
-@media (min-width:992px) {
-    .n-container {
-      max-width: 960px;
-    }
-}
-
-@media (min-width:768px) {
-    .n-container {
-      max-width: 720px;
-    }
-}
-
-@media (min-width:576px) {
-    .n-container {
-      max-width: 540px;
-    }
-}
-  
-.n-container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-/* @media (max-width:768px) {
-    .n-row {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
-    }
-} */
-
-.n-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    justify-content: center;
-}
-
-@media (min-width:768px) {
-    .n-col-md-8 {
-      -ms-flex: 0 0 66.666667%;
-      flex: 0 0 66.666667%;
-      max-width: 66.666667%;
-    }
-}  
-.n-col-md-8{
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-  
-@media (min-width:768px) {
-    .n-col-md-4 {
-      -ms-flex: 0 0 33.333333%;
-      flex: 0 0 33.333333%;
-      max-width: 33.333333%;
-    }
-}
-
-.n-col-md-4{
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-    
-/*________________________________________________________________END____________________________________________________*/

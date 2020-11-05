@@ -2,92 +2,126 @@ import React, { Component } from "react";
 // import RecipesForm from './RecipesForm'
 import RecipEAT from '../assets/img/RecipEAT.svg';
 import api from "../api";
-import QueueItems from './QueueComponent'
 
 import "../css/styles.scss";
 
+function QueueItems (props) {
+    const trash = "https://www.flaticon.com/svg/static/icons/svg/753/753345.svg"
+    const items = props.items
+
+    const listItems = items.map((item) => {
+        return <div className="addRecipe" key={item.key}>
+            <p>
+                {/* <input
+                    type="text"
+                    id={item.key}
+                    value={item}
+                    onChange={(e) => props.setUpdate(e.target.value, item.key)}
+                /> */}
+                {item.text}
+                <img
+                    onClick={() => props.deleteItem(item.key, props.name)}
+                    src={trash}
+                    alt=""/>
+            </p>
+        </div>
+    })
+    return (
+        <div>{listItems}</div>
+    )
+}
 
 class NewRecipe extends Component {
     constructor(props){
         super(props)
         this.state = {
-            title: "",
-            ingredients: "",
-            time: "",
-            ingredients_size: "",
-            ingredients_measure: "",
-            description: "",
-            instruction: "",
-            image: "",
             listIngredients: [],
             listIngredientsMeasure: [],
             listInstructions: [],
+            title: "",
+            ingredients: {text: "", key: ""},
+            time: "",
+            ingredients_size: "",
+            ingredients_measure: {text: "", key: ""},
+            description: "",
+            instruction: {text: "", key: ""},
+            image: ""
         }
 
         this.handleChange = this.handleChange.bind(this)
         this.addToList = this.addToList.bind(this)
-        this.addToListMeasure = this.addToListMeasure.bind(this)
-        this.addToInstructions = this.addToInstructions.bind(this)
         this.handlePostSubmit = this.handlePostSubmit.bind(this)
-        // this.deleteItem = this.deleteItem.bind(this)
-        this.setKeys = this.setKeys.bind(this)
+        this.deleteItem = this.deleteItem.bind(this)
     };
 
     handleChange = (e) => {
         const {name, value} = e.target
-        this.setState({[name]: value})
-        console.log(this.state)
+        this.setState({
+            [name]: {
+                text: e.target.value,
+                key: Date.now()
+            }
+        })
     };
 
-    addToList(e) {
+    addToList(e, list) {
         e.preventDefault()
-        const newItem = this.state.ingredients;
-        if (newItem) {
-            const newItems=[...this.state.listIngredients, newItem];
-            this.setState({listIngredients: newItems});
+        // const newItem = this.state.ingredients;
+        const name = eval("this.state." + list)
+        let newItem
+        if (list === "listIngredients") {
+            newItem = this.state.ingredients
+        } else if (list === "listIngredientsMeasure") {
+            newItem = this.state.ingredients_measure
+        } else if (list === "listInstructions") {
+            newItem = this.state.instruction
         }
-        this.setState({ingredients: ""});
-        console.log(this.state.listIngredients);
-    }
-
-    addToListMeasure(e) {
-        e.preventDefault()
-        const newItem = this.state.ingredients_measure;
         if (newItem) {
-            const newItems=[...this.state.listIngredientsMeasure, newItem];
-            this.setState({listIngredientsMeasure: newItems});
-        }
-        this.setState({ingredients_measure: ""});
-        console.log(this.state.listIngredientsMeasure);
-    }
-
-    addToInstructions(e) {
-        e.preventDefault()
-        const newItem = this.state.instruction;
-        if (newItem) {
-            const newItems=[...this.state.listInstructions, newItem]
-            this.setState({listInstructions: newItems})
-        }
-        this.setState({instruction: ""})
-        console.log(this.state.listInstructions)
-    }
-
-    // deleteItem = (key, list) => {
-    //     const filteredItems = list.filter(item =>
-    //         item !== key)
-    //         setList(filteredItems)
-    // }
-
-    setKeys(array){
-        const list = []
-        array.map((item, index) => {
-            const obj ={
-                text: item,
-                key: index,
+            console.log(newItem)
+            const newItems=[...name, newItem]
+            if (list === "listIngredients") {
+                this.setState({
+                    listIngredients : newItems,
+                    ingredients: {
+                        text: "",
+                        key: ""
+                    }
+                })
+            } else if (list === "listIngredientsMeasure") {
+                this.setState({
+                    listIngredientsMeasure: newItems,
+                    ingredients_measure: {
+                        text: "",
+                        key: ""
+                    }
+                })
+            } else if (list === "listInstructions") {
+                this.setState({
+                    listInstructions: newItems,
+                    instruction: {
+                        text: "",
+                        key: ""
+                    }
+                })
             }
-            return list.push(obj)
-        })
-        return list
+        }
+    }
+
+    deleteItem = (key, name) => {
+        let filteredItems
+        if (name === "listIngredients") {
+            filteredItems = this.state.listIngredients.filter(item =>
+                item.key !== key)
+                this.setState({listIngredients : filteredItems})
+        } else if (name === "listIngredientsMeasure") {
+            filteredItems = this.state.listIngredientsMeasure.filter(item =>
+                item.key !== key)
+                this.setState({listIngredientsMeasure : filteredItems})
+        } else if (name === "listInstructions"){
+            filteredItems = this.state.listInstructions.filter(item =>
+                item.key !== key)
+                this.setState({listInstructions : filteredItems})
+        }
     }
 
     handlePostSubmit = async (e) => {
@@ -166,15 +200,18 @@ class NewRecipe extends Component {
                                     <div className="btn-box-list"> 
                                         <input className="input-fields" type="text" 
                                         name="ingredients" 
-                                        value={this.state.ingredients} 
+                                        value={this.state.ingredients.text} 
                                         onChange={this.handleChange} 
                                         placeholder="Ingredientes" />
-                                        <button onClick={this.addToList}>+</button>
+                                        <button 
+                                            onClick={(e) => this.addToList(e, "listIngredients")}>
+                                        +</button>
                                     </div>
                                     <div>
                                     <QueueItems
-                                        items={this.setKeys(this.state.listIngredients)}
+                                        items={this.state.listIngredients}
                                         deleteItem={this.deleteItem}
+                                        name="listIngredients"
                                         />
                                     </div>
                                 </div>
@@ -202,10 +239,17 @@ class NewRecipe extends Component {
                                     <div className="btn-box-list">
                                         <input className="input-fields" type="text" 
                                         name="ingredients_measure" 
-                                        value={this.state.ingredients_measure} 
+                                        value={this.state.ingredients_measure.text} 
                                         onChange={this.handleChange} 
                                         placeholder="Medidas de Ingredientes" />
-                                        <button onClick={this.addToListMeasure}>+</button>
+                                        <button onClick={(e) => this.addToList(e, "listIngredientsMeasure")}>+</button>
+                                    </div>
+                                    <div className="queueItem">
+                                        <QueueItems
+                                            items={this.state.listIngredientsMeasure}
+                                            deleteItem={this.deleteItem}
+                                            name="listIngredientsMeasure"
+                                            />
                                     </div>
                                 </div>
                                 <div className="form-recipes">
@@ -222,10 +266,17 @@ class NewRecipe extends Component {
                                     <label htmlFor="preparation">Preparacion</label>
                                     <div className="btn-box-list">
                                         <textarea type="text" name="instruction" 
-                                        value={this.state.instruction} 
+                                        value={this.state.instruction.text} 
                                         onChange={this.handleChange} 
                                         placeholder="Como prepararlo?" />
-                                        <button onClick={this.addToInstructions}>+</button>
+                                        <button onClick={(e) => this.addToList(e, "listInstructions")}>+</button>
+                                    </div>
+                                    <div>
+                                        <QueueItems
+                                            items={this.state.listInstructions}
+                                            deleteItem={this.deleteItem}
+                                            name="listInstructions"
+                                            />
                                     </div>
                                 </div>
                                 <div className="form-recipes">

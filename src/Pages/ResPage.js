@@ -133,9 +133,9 @@ export default function ResPage() {
                     </Form>
                     <div>
                         <QueueItems
-                        items={listItems}
-                        deleteItem={deleteItem}
-                        setUpdate={setUpdate}
+                            items={listItems}
+                            deleteItem={deleteItem}
+                            setUpdate={setUpdate}
                         />
                     </div>
                 </div>

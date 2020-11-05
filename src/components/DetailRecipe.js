@@ -56,7 +56,7 @@ function DetailRecipe(props) {
                 <Row>
                     <Col sm={8}>
                         {todos.map(task =>
-                            <div>
+                            <div className="myCheckBox">
                                 <input
                                     type="checkbox"
                                     checked={task.completed}
