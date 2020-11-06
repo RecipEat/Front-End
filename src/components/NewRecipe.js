@@ -54,14 +54,18 @@ class NewRecipe extends Component {
         this.deleteItem = this.deleteItem.bind(this)
     };
 
-    handleChange = (e) => {
+    handleChange = (e, _name) => {
         const {name, value} = e.target
-        this.setState({
-            [name]: {
-                text: e.target.value,
-                key: Date.now()
-            }
-        })
+        if (_name !== null){
+            this.setState({
+                [name]: {
+                    text: e.target.value,
+                    key: Date.now()
+                }
+            })
+        } else {
+            this.setState({[name]: e.target.value})
+        }
     };
 
     addToList(e, list) {
@@ -193,7 +197,8 @@ class NewRecipe extends Component {
                                     <input className="input-fields" type="text" 
                                         name="title" 
                                         value={this.state.title} 
-                                        onChange={this.handleChange} placeholder="Nombre" />
+                                        onChange={(e) => this.handleChange(e, null)} 
+                                        placeholder="Nombre" />
                                 </div>
                                 <div className="form-recipes">
                                     <label htmlFor="ingredientes">Ingredientes</label>
@@ -201,7 +206,7 @@ class NewRecipe extends Component {
                                         <input className="input-fields" type="text" 
                                             name="ingredients" 
                                             value={this.state.ingredients.text} 
-                                            onChange={this.handleChange} 
+                                            onChange={(e) => this.handleChange(e, "ingredients")} 
                                             placeholder="Ingredientes" />
                                         <button 
                                             onClick={(e) => this.addToList(e, "listIngredients")}>
@@ -221,7 +226,7 @@ class NewRecipe extends Component {
                                     <label htmlFor="time">Time</label>
                                     <input className="input-fields" type="text" name="time" 
                                         value={this.time} 
-                                        onChange={this.handleChange} 
+                                        onChange={(e) => this.handleChange(e, null)} 
                                         placeholder="Tiempo de Preparacion" />
                                 </div>
                                 <div className="form-recipes">
@@ -229,7 +234,7 @@ class NewRecipe extends Component {
                                     <input className="input-fields" type="number" 
                                         name="ingredients_size" 
                                         value={this.state.ingredients_size} 
-                                        onChange={this.handleChange} 
+                                        onChange={(e) => this.handleChange(e, null)} 
                                         placeholder="Cantidad de Ingredientes" />
                                 </div>
                             </div>
@@ -240,7 +245,7 @@ class NewRecipe extends Component {
                                         <input className="input-fields" type="text" 
                                             name="ingredients_measure" 
                                             value={this.state.ingredients_measure.text} 
-                                            onChange={this.handleChange} 
+                                            onChange={(e) => this.handleChange(e, "ingredients_measure")} 
                                             placeholder="Medidas de Ingredientes" />
                                         <button 
                                             onClick={(e) => this.addToList(e, "listIngredientsMeasure")}>
@@ -259,7 +264,7 @@ class NewRecipe extends Component {
                                     <input className="input-fields" type="text" 
                                         name="description" 
                                         value={this.state.description} 
-                                        onChange={this.handleChange} 
+                                        onChange={(e) => this.handleChange(e, null)} 
                                         placeholder="De que se trata el Plato" />
                                 </div>
                             </div>
@@ -269,7 +274,7 @@ class NewRecipe extends Component {
                                     <div className="btn-box-list">
                                         <textarea type="text" name="instruction" 
                                             value={this.state.instruction.text} 
-                                            onChange={this.handleChange} 
+                                            onChange={(e) => this.handleChange(e, "instruction")} 
                                             placeholder="Como prepararlo?" />
                                         <button
                                             onClick={(e) => this.addToList(e, "listInstructions")}>
@@ -288,7 +293,7 @@ class NewRecipe extends Component {
                                     <input className="input-fields" type="text" 
                                         name="image" 
                                         value={this.state.image} 
-                                        onChange={this.handleChange} 
+                                        onChange={(e) => this.handleChange(e, null)} 
                                         placeholder="Anade la URL de la Imagen" />
                                 </div>
                             </div>
