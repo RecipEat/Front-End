@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import logo from './assets/img/recipEat.png';
+import React from 'react';
+import logo from '../../assets/img/recipEat.png';
 
-import './css/styles.scss';
+import '../../css/styles.scss';
 
 const Footer = () => {
   return (
